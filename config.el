@@ -65,7 +65,10 @@
 ;;(setq lsp-ui-doc-enable nil)
 
 ;; disable company mode in shell
-(add-hook! 'shell-mode-hook (lambda() company-mode nil))
+;; disable company mode in shell
+(add-hook 'shell-mode-hook (lambda ()
+                             (global-company-mode -1)
+                             (company-mode -1)))
 
 ;; use hunspell
 (if (file-exists-p "/usr/bin/hunspell")
