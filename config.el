@@ -67,7 +67,6 @@
 ;; disable company mode in shell
 ;; disable company mode in shell
 (add-hook 'shell-mode-hook (lambda ()
-                             (global-company-mode -1)
                              (company-mode -1)))
 
 ;; use hunspell
