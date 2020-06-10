@@ -33,7 +33,6 @@
 (custom-theme-set-faces! 'doom-vibrant
   '(fringe :foreground "teal"))  ;; can't see fringe
 
-;;(setq doom-theme 'doom-deeper-blue)
 ;;(setq doom-theme 'doom-material)
 ;;(setq doom-theme 'doom-monokai-pro)
 ;;(setq doom-theme 'doom-oceanic-next)
@@ -41,6 +40,7 @@
 ;;(setq doom-theme 'doom-sourcerer)
 ;;(setq doom-theme 'doom-spacegrey)
 ;;(setq doom-theme 'doom-tomorrow-night)
+;;(load-theme 'deeper-blue t)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -68,6 +68,9 @@
 ;; disable company mode in shell
 (add-hook 'shell-mode-hook (lambda ()
                              (company-mode -1)))
+
+;; blinky cursor!
+(blink-cursor-mode 1)
 
 ;; use hunspell
 (if (file-exists-p "/usr/bin/hunspell")
