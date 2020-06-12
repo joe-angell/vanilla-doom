@@ -57,6 +57,12 @@
 ;; vanilla fringe, we want to see the fringe!
 (after! git-gutter-fringe (fringe-mode nil))
 
+;; turn auto-save back on...
+(setq auto-save-default t)
+
+;; blinky back on
+(blink-cursor-mode 1)
+
 ;; alter company mode delay
 ;;(after! company
 ;;  (setq company-idle-delay 0.1))
@@ -65,12 +71,8 @@
 ;;(setq lsp-ui-doc-enable nil)
 
 ;; disable company mode in shell
-;; disable company mode in shell
 (add-hook 'shell-mode-hook (lambda ()
                              (company-mode -1)))
-
-;; blinky cursor!
-(blink-cursor-mode 1)
 
 ;; use hunspell
 (if (file-exists-p "/usr/bin/hunspell")
